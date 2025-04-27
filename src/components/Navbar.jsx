@@ -83,7 +83,7 @@ function Navbar() {
       </div>
       
       <div style={contactContainerStyle}>
-        <a href="/#contact" style={contactLinkStyle}>Contact</a>
+        <a href="/contact" style={contactLinkStyle}>Contact</a>
       </div>
     </nav>
   );

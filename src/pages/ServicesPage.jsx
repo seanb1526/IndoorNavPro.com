@@ -255,9 +255,29 @@ function ServicesPage() {
   // CTA section styles
   const ctaSectionStyle = {
     padding: '6rem 2rem',
-    backgroundColor: '#192459',
+    backgroundColor: '#0a192f', // Changed from #192459 to #0a192f to match landing page
     textAlign: 'center',
-    color: '#fff'
+    color: '#fff',
+    backgroundImage: `url(${navproPattern})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    position: 'relative'
+  };
+  
+  const ctaOverlayStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(10, 25, 47, 0.85)', // Changed to match landing page's overlay
+    zIndex: 1
+  };
+  
+  const ctaContentStyle = {
+    position: 'relative',
+    zIndex: 2
   };
   
   const ctaTitleStyle = {
@@ -458,13 +478,16 @@ function ServicesPage() {
       
       {/* CTA Section */}
       <section style={ctaSectionStyle}>
-        <h2 style={ctaTitleStyle}>Ready to Transform Your Business?</h2>
-        <p style={ctaDescriptionStyle}>
-          Get in touch with our team to discuss how we can help you achieve your technology goals.
-        </p>
-        <Link to="/contact" style={ctaButtonStyle}>
-          Schedule a Consultation
-        </Link>
+        <div style={ctaOverlayStyle}></div>
+        <div style={ctaContentStyle}>
+          <h2 style={ctaTitleStyle}>Ready to Transform Your Business?</h2>
+          <p style={ctaDescriptionStyle}>
+            Get in touch with our team to discuss how we can help you achieve your technology goals.
+          </p>
+          <Link to="/contact" style={ctaButtonStyle}>
+            Schedule a Consultation
+          </Link>
+        </div>
       </section>
     </div>
   );
