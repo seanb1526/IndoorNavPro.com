@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import AboutPage from './pages/AboutPage'
-import FeaturesPage from './pages/FeaturesPage'
+import ServicesPage from './pages/ServicesPage'
+import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -24,7 +25,8 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>

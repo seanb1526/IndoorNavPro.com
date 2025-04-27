@@ -77,9 +77,9 @@ function Navbar() {
       </div>
       
       <div style={navLinksStyle}>
-        <Link to="/features" style={linkStyle}>Features</Link>
-        <Link to="/solutions" style={linkStyle}>Solutions</Link>
-        <Link to="/about" style={linkStyle}>About Us</Link>
+        <Link to="/about" style={linkStyle}>About</Link>
+        <Link to="/services" style={linkStyle}>Services</Link>
+        <Link to="/projects" style={linkStyle}>Projects</Link>
       </div>
       
       <div style={contactContainerStyle}>

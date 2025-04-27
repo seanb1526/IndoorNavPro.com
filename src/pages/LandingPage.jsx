@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 import landingVideo from '../assets/videos/landing-video.mp4';
 import aiVideo from '../assets/videos/artificial-intelligence.mp4';
 import locationVideo from '../assets/videos/navigation.mp4';
+import softwareVideo from '../assets/videos/software-development.mp4';
+import mobileVideo from '../assets/videos/mobile-app.mp4'
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 
@@ -124,8 +126,8 @@ function LandingPage() {
   // Service cards data
   const serviceCards = [
     {
-      image: "https://via.placeholder.com/400x200?text=Software+Engineering",
-      title: "Software Engineering",
+      video: softwareVideo,
+      title: "Software Development",
       description: "Building something great? Let's bring your idea to life with custom software solutions."
     },
     {
@@ -139,7 +141,7 @@ function LandingPage() {
       description: "Need precise positioning? Our indoor navigation solutions provide unmatched accuracy."
     },
     {
-      image: "https://via.placeholder.com/400x200?text=Mobile+Solutions",
+      video: mobileVideo,
       title: "Mobile Solutions",
       description: "Going mobile? We build responsive applications that work on any device."
     }
@@ -182,7 +184,7 @@ function LandingPage() {
                 video={card.video}
                 title={card.title}
                 description={card.description}
-                linkTo="/solutions"
+                linkTo="/services"
               />
             </div>
           ))}
