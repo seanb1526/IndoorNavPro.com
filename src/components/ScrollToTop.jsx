@@ -1,9 +1,16 @@
-import useScrollToTop from '../hooks/useScrollToTop';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-// This is a utility component that doesn't render anything
-// It just uses the hook to trigger scrolling behavior
 function ScrollToTop() {
-  useScrollToTop();
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [pathname]);
+  
   return null;
 }
 
