@@ -147,9 +147,108 @@ function LandingPage() {
     }
   ];
   
+  // Tech Stack Section Styles
+  const techStackSectionStyle = {
+    padding: '8rem 2rem 6rem 2rem', // Increased top padding from 6rem to 8rem
+    backgroundColor: '#3248b2', // Same blue as navbar
+    color: '#fff',
+    textAlign: 'center'
+  };
+  
+  const techStackTitleStyle = {
+    fontSize: '1.75rem',
+    fontWeight: '500',
+    marginBottom: '1.5rem',
+    fontFamily: "'Raleway', sans-serif",
+    color: '#fff',
+    textTransform: 'uppercase',
+    letterSpacing: '2px'
+  };
+  
+  const techStackHeadingStyle = {
+    fontSize: '3rem',
+    fontWeight: '600',
+    marginBottom: '2rem',
+    fontFamily: "'Raleway', sans-serif",
+    color: '#fff',
+    maxWidth: '800px',
+    margin: '0 auto 2rem'
+  };
+  
+  const techStackDescriptionStyle = {
+    fontSize: '1.2rem',
+    lineHeight: '1.8',
+    maxWidth: '800px',
+    margin: '0 auto',
+    fontFamily: "'Raleway', sans-serif"
+  };
+  
+  // Add ticker container and animation styles
+  const tickerContainerStyle = {
+    marginTop: '4rem',
+    overflow: 'hidden',
+    width: '100%'
+  };
+  
+  const tickerRowStyle = {
+    display: 'flex',
+    whiteSpace: 'nowrap',
+    margin: '1.5rem 0'
+  };
+  
+  const tickerLeftToRightStyle = {
+    animation: 'tickerLeftToRight 40s linear infinite', // Increased from 30s to 40s
+    display: 'flex'
+  };
+  
+  const tickerRightToLeftStyle = {
+    animation: 'tickerRightToLeft 40s linear infinite', // Increased from 30s to 40s
+    display: 'flex'
+  };
+  
+  const techItemStyle = {
+    padding: '0.75rem 2.5rem', // Increased padding for larger hit area
+    margin: '0 1.5rem',       // Increased margin between items
+    fontSize: '2rem',         // Increased font size from 1.5rem to 2rem
+    fontWeight: '600',
+    background: 'rgba(255, 255, 255, 0.15)',
+    borderRadius: '4px',
+    display: 'inline-block',
+    fontFamily: "'Raleway', sans-serif"
+  };
+  
+  // Tech stack names for the ticker
+  const techStackRowOne = [
+    'React', 'Angular', 'Vue.js', 'Node.js', 'Express', 
+    'MongoDB', 'Firebase', 'AWS', 'Docker',
+    'GraphQL', 'Redux', 'Next.js', 'Material UI'
+  ];
+  
+  const techStackRowTwo = [
+    'Python', 'Django', 'Flask', 'PostgreSQL', 'MySQL', 
+    'Swift', 'Kotlin', 'React Native',
+    'Flutter', 'Java', 'Figma', 'Javascript', 'TypeScript'
+  ];
+  
   return (
     <div>
+      {/* Add style tag for animations */}
+      <style>
+        {`
+          @keyframes tickerLeftToRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
+          }
+          
+          @keyframes tickerRightToLeft {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+          }
+        `}
+      </style>
+      
       <Navbar />
+      
       <section style={heroStyle}>
         {/* Video background */}
         <div style={videoOverlayStyle}></div>
@@ -188,6 +287,38 @@ function LandingPage() {
               />
             </div>
           ))}
+        </div>
+      </section>
+      
+      {/* Tech Stack Section */}
+      <section style={techStackSectionStyle}>
+        <h3 style={techStackTitleStyle}>Our Tech Stack</h3>
+        <h2 style={techStackHeadingStyle}>Harnessing the Power of Technology</h2>
+        <p style={techStackDescriptionStyle}>
+          Our team leverages the latest tools and technologies to build robust and scalable solutions.
+        </p>
+        
+        {/* Tech Stack Ticker */}
+        <div style={tickerContainerStyle}>
+          {/* First row - Left to Right */}
+          <div style={tickerRowStyle}>
+            <div style={{...tickerLeftToRightStyle}}>
+              {/* Duplicate the items to ensure continuous scroll */}
+              {[...techStackRowOne, ...techStackRowOne].map((tech, index) => (
+                <div key={index} style={techItemStyle}>{tech}</div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Second row - Right to Left */}
+          <div style={tickerRowStyle}>
+            <div style={{...tickerRightToLeftStyle}}>
+              {/* Duplicate the items to ensure continuous scroll */}
+              {[...techStackRowTwo, ...techStackRowTwo].map((tech, index) => (
+                <div key={index} style={techItemStyle}>{tech}</div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </div>
