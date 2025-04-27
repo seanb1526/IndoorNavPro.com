@@ -393,211 +393,219 @@ function LandingPage() {
           gap: '1.8rem',
           height: '100%'
         }}>
-          {/* Project 1 - 3STEP Sports */}
-          <div style={{
-            borderRadius: '8px',
-            overflow: 'hidden',
-            backgroundColor: '#e8eff7', // Lighter blue background from image
-            height: '260px',
-            position: 'relative',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            transition: 'transform 0.3s ease',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '1rem'
-          }}>
-            <img 
-              src={zipattendLogo} 
-              alt="ZipAttend" 
-              style={{
-                maxHeight: '45%',
-                maxWidth: '70%',
-                objectFit: 'contain'
-              }}
-            />
+          {/* Project 1 - ZipAttend */}
+          <Link to="/projects" style={{ textDecoration: 'none' }}>
             <div style={{
-              position: 'absolute',
-              bottom: '15px',
-              left: '15px',
-              textAlign: 'left'
+              borderRadius: '8px',
+              overflow: 'hidden',
+              backgroundColor: '#e8eff7', // Lighter blue background from image
+              height: '260px',
+              position: 'relative',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              transition: 'transform 0.3s ease',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '1rem'
             }}>
-              <p style={{
-                color: '#333',
-                fontFamily: "'Raleway', sans-serif",
-                fontSize: '1rem',
-                fontWeight: '600',
-                margin: 0,
-                marginBottom: '3px'
+              <img 
+                src={zipattendLogo} 
+                alt="ZipAttend" 
+                style={{
+                  maxHeight: '45%',
+                  maxWidth: '70%',
+                  objectFit: 'contain'
+                }}
+              />
+              <div style={{
+                position: 'absolute',
+                bottom: '15px',
+                left: '15px',
+                textAlign: 'left'
               }}>
-                Attendance Tracking Web App
-              </p>
-              <p style={{
-                color: '#666',
-                fontFamily: "'Raleway', sans-serif",
-                fontSize: '0.85rem',
-                fontWeight: '400',
-                margin: 0
-              }}>
-                Salisbury University 
-              </p>
+                <p style={{
+                  color: '#333',
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: '1rem',
+                  fontWeight: '600',
+                  margin: 0,
+                  marginBottom: '3px'
+                }}>
+                  Attendance Tracking Web App
+                </p>
+                <p style={{
+                  color: '#666',
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: '0.85rem',
+                  fontWeight: '400',
+                  margin: 0
+                }}>
+                  Salisbury University 
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
           
           {/* Project 2 - navpulse */}
-          <div style={{
-            borderRadius: '8px',
-            overflow: 'hidden',
-            backgroundColor: '#e8eff7', // Lighter blue background from image
-            height: '260px',
-            position: 'relative',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            transition: 'transform 0.3s ease',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '1rem'
-          }}>
-            <img 
-              src={navpulseLogo} 
-              alt="navpulse" 
-              style={{
-                maxHeight: '45%',
-                maxWidth: '70%',
-                objectFit: 'contain'
-              }}
-            />
+          <Link to="/projects" style={{ textDecoration: 'none' }}>
             <div style={{
-              position: 'absolute',
-              bottom: '15px',
-              left: '15px',
-              textAlign: 'left'
+              borderRadius: '8px',
+              overflow: 'hidden',
+              backgroundColor: '#e8eff7', // Lighter blue background from image
+              height: '260px',
+              position: 'relative',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              transition: 'transform 0.3s ease',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '1rem'
             }}>
-              <p style={{
-                color: '#333',
-                fontFamily: "'Raleway', sans-serif",
-                fontSize: '1rem',
-                fontWeight: '600',
-                margin: 0,
-                marginBottom: '3px'
+              <img 
+                src={navpulseLogo} 
+                alt="navpulse" 
+                style={{
+                  maxHeight: '45%',
+                  maxWidth: '70%',
+                  objectFit: 'contain'
+                }}
+              />
+              <div style={{
+                position: 'absolute',
+                bottom: '15px',
+                left: '15px',
+                textAlign: 'left'
               }}>
-                Gamified Downtown Mobile App
-              </p>
-              <p style={{
-                color: '#666',
-                fontFamily: "'Raleway', sans-serif",
-                fontSize: '0.85rem',
-                fontWeight: '400',
-                margin: 0
-              }}>
-                Downtown Salisbury- Arts, Business and Culture Dept. 
-              </p>
+                <p style={{
+                  color: '#333',
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: '1rem',
+                  fontWeight: '600',
+                  margin: 0,
+                  marginBottom: '3px'
+                }}>
+                  Gamified Downtown Mobile App
+                </p>
+                <p style={{
+                  color: '#666',
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: '0.85rem',
+                  fontWeight: '400',
+                  margin: 0
+                }}>
+                  Downtown Salisbury- Arts, Business and Culture Dept. 
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
           
-          {/* Project 3 -  */}
-          <div style={{
-            borderRadius: '8px',
-            overflow: 'hidden',
-            backgroundColor: '#e8eff7', // Lighter blue background from image
-            height: '260px',
-            position: 'relative',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            transition: 'transform 0.3s ease',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '1rem'
-          }}>
-            <h4 style={{
-              color: '#333',
-              fontFamily: "'Raleway', sans-serif",
-              textAlign: 'center',
-              padding: '0 1rem',
-              fontSize: '1.8rem',
-              fontWeight: '600'
-            }}>SU MAPS</h4>
+          {/* Project 3 - SU MAPS */}
+          <Link to="/projects" style={{ textDecoration: 'none' }}>
             <div style={{
-              position: 'absolute',
-              bottom: '15px',
-              left: '15px',
-              textAlign: 'left'
+              borderRadius: '8px',
+              overflow: 'hidden',
+              backgroundColor: '#e8eff7', // Lighter blue background from image
+              height: '260px',
+              position: 'relative',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              transition: 'transform 0.3s ease',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '1rem'
             }}>
-              <p style={{
+              <h4 style={{
                 color: '#333',
                 fontFamily: "'Raleway', sans-serif",
-                fontSize: '1rem',
-                fontWeight: '600',
-                margin: 0,
-                marginBottom: '3px'
+                textAlign: 'center',
+                padding: '0 1rem',
+                fontSize: '1.8rem',
+                fontWeight: '600'
+              }}>SU MAPS</h4>
+              <div style={{
+                position: 'absolute',
+                bottom: '15px',
+                left: '15px',
+                textAlign: 'left'
               }}>
-                MVP Development
-              </p>
-              <p style={{
-                color: '#666',
-                fontFamily: "'Raleway', sans-serif",
-                fontSize: '0.85rem',
-                fontWeight: '400',
-                margin: 0
-              }}>
-                Sean Berndlmaier
-              </p>
+                <p style={{
+                  color: '#333',
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: '1rem',
+                  fontWeight: '600',
+                  margin: 0,
+                  marginBottom: '3px'
+                }}>
+                  MVP Development
+                </p>
+                <p style={{
+                  color: '#666',
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: '0.85rem',
+                  fontWeight: '400',
+                  margin: 0
+                }}>
+                  Sean Berndlmaier
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
           
-          {/* Project 4 -  */}
-          <div style={{
-            borderRadius: '8px',
-            overflow: 'hidden',
-            backgroundColor: '#e8eff7', // Lighter blue background from image
-            height: '260px',
-            position: 'relative',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            transition: 'transform 0.3s ease',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '1rem'
-          }}>
-            <h4 style={{
-              color: '#333',
-              fontFamily: "'Raleway', sans-serif",
-              textAlign: 'center',
-              padding: '0 1rem',
-              fontSize: '1.8rem',
-              fontWeight: '600'
-            }}>Project 4</h4>
+          {/* Project 4 */}
+          <Link to="/projects" style={{ textDecoration: 'none' }}>
             <div style={{
-              position: 'absolute',
-              bottom: '15px',
-              left: '15px',
-              textAlign: 'left'
+              borderRadius: '8px',
+              overflow: 'hidden',
+              backgroundColor: '#e8eff7', // Lighter blue background from image
+              height: '260px',
+              position: 'relative',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              transition: 'transform 0.3s ease',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '1rem'
             }}>
-              <p style={{
+              <h4 style={{
                 color: '#333',
                 fontFamily: "'Raleway', sans-serif",
-                fontSize: '1rem',
-                fontWeight: '600',
-                margin: 0,
-                marginBottom: '3px'
+                textAlign: 'center',
+                padding: '0 1rem',
+                fontSize: '1.8rem',
+                fontWeight: '600'
+              }}>Project 4</h4>
+              <div style={{
+                position: 'absolute',
+                bottom: '15px',
+                left: '15px',
+                textAlign: 'left'
               }}>
-                What is it
-              </p>
-              <p style={{
-                color: '#666',
-                fontFamily: "'Raleway', sans-serif",
-                fontSize: '0.85rem',
-                fontWeight: '400',
-                margin: 0
-              }}>
-                For who
-              </p>
+                <p style={{
+                  color: '#333',
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: '1rem',
+                  fontWeight: '600',
+                  margin: 0,
+                  marginBottom: '3px'
+                }}>
+                  What is it
+                </p>
+                <p style={{
+                  color: '#666',
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: '0.85rem',
+                  fontWeight: '400',
+                  margin: 0
+                }}>
+                  For who
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
@@ -674,7 +682,9 @@ function LandingPage() {
                   ...buttonStyle,
                   backgroundColor: '#3248b2',
                   marginRight: '1.5rem'
-                }}>
+                }}
+                
+                >
                   BOOK A CALL
                 </button>
                 <span style={{

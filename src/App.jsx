@@ -6,6 +6,7 @@ import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop' // We'll create this component
 
 function App() {
   const appStyle = {
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop /> {/* This component will handle scrolling to top on navigation */}
       <div style={appStyle}>
         <Navbar />
         <main style={{ flex: '1', width: '100%' }}>
