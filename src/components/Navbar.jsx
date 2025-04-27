@@ -8,7 +8,7 @@ function Navbar() {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '1rem 2rem',
-    backgroundColor: '#3248b2', // Changed to requested blue color
+    backgroundColor: '#192459', // Updated to the requested darker blue color
     position: 'fixed',
     width: '100%',
     zIndex: 1000,

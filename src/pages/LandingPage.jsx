@@ -321,6 +321,164 @@ function LandingPage() {
           </div>
         </div>
       </section>
+      
+      {/* Case Studies Section */}
+      <section style={{
+        padding: '8rem 2rem',
+        backgroundColor: '#fff',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        maxWidth: '1400px',
+        margin: '0 auto',
+        flexWrap: 'wrap'
+      }}>
+        {/* Left Content - Text and Button */}
+        <div style={{
+          flex: '1',
+          minWidth: '300px',
+          textAlign: 'left',
+          marginRight: '2rem',
+          marginBottom: '2rem'
+        }}>
+          <h3 style={{
+            fontSize: '1.5rem',
+            fontWeight: '500',
+            marginBottom: '1rem',
+            fontFamily: "'Raleway', sans-serif",
+            color: '#3248b2',
+            textTransform: 'uppercase',
+            letterSpacing: '2px'
+          }}>Case Studies</h3>
+          
+          <h2 style={{
+            fontSize: '2.8rem',
+            fontWeight: '600',
+            marginBottom: '1.5rem',
+            fontFamily: "'Raleway', sans-serif",
+            color: '#333',
+            lineHeight: '1.2'
+          }}>Our Success Stories</h2>
+          
+          <p style={{
+            fontSize: '1.2rem',
+            lineHeight: '1.8',
+            color: '#555',
+            marginBottom: '2rem',
+            fontFamily: "'Raleway', sans-serif",
+            maxWidth: '550px'
+          }}>
+            From MVPs to full-scale digital transformations, we've done it all. Discover how our team has empowered businesses of every size and industry.
+          </p>
+          
+          <Link to="/projects" style={{
+            ...buttonStyle,
+            display: 'inline-block',
+            marginTop: '1rem'
+          }}>
+            More Projects
+          </Link>
+        </div>
+        
+        {/* Right Content - 2x2 Grid of Projects */}
+        <div style={{
+          flex: '1',
+          minWidth: '300px',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
+          height: '100%'
+        }}>
+          {/* Project 1 */}
+          <div style={{
+            borderRadius: '8px',
+            overflow: 'hidden',
+            backgroundColor: '#d6daf0', // Changed from the gradient to a solid light blue
+            height: '180px',
+            position: 'relative',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            transition: 'transform 0.3s ease',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <h4 style={{
+              color: '#3248b2', // Kept the blue text color
+              fontFamily: "'Raleway', sans-serif",
+              textAlign: 'center',
+              padding: '0 1rem'
+            }}>Indoor Navigation System</h4>
+          </div>
+          
+          {/* Project 2 */}
+          <div style={{
+            borderRadius: '8px',
+            overflow: 'hidden',
+            backgroundColor: '#d6daf0', // Changed from the gradient to a solid light blue
+            height: '180px',
+            position: 'relative',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            transition: 'transform 0.3s ease',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <h4 style={{
+              color: '#3248b2', // Kept the blue text color
+              fontFamily: "'Raleway', sans-serif",
+              textAlign: 'center',
+              padding: '0 1rem'
+            }}>AI-Powered Analytics</h4>
+          </div>
+          
+          {/* Project 3 */}
+          <div style={{
+            borderRadius: '8px',
+            overflow: 'hidden',
+            backgroundColor: '#d6daf0', // Changed from the gradient to a solid light blue
+            height: '180px',
+            position: 'relative',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            transition: 'transform 0.3s ease',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <h4 style={{
+              color: '#3248b2', // Kept the blue text color
+              fontFamily: "'Raleway', sans-serif",
+              textAlign: 'center',
+              padding: '0 1rem'
+            }}>Enterprise Mobile App</h4>
+          </div>
+          
+          {/* Project 4 */}
+          <div style={{
+            borderRadius: '8px',
+            overflow: 'hidden',
+            backgroundColor: '#d6daf0', // Changed from the gradient to a solid light blue
+            height: '180px',
+            position: 'relative',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            transition: 'transform 0.3s ease',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <h4 style={{
+              color: '#3248b2', // Kept the blue text color
+              fontFamily: "'Raleway', sans-serif",
+              textAlign: 'center',
+              padding: '0 1rem'
+            }}>Location-Based Marketing</h4>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
