@@ -4,7 +4,9 @@ import landingVideo from '../assets/videos/landing-video.mp4';
 import aiVideo from '../assets/videos/artificial-intelligence.mp4';
 import locationVideo from '../assets/videos/navigation.mp4';
 import softwareVideo from '../assets/videos/software-development.mp4';
-import mobileVideo from '../assets/videos/mobile-app.mp4'
+import mobileVideo from '../assets/videos/mobile-app.mp4';
+import navpulseLogo from '../assets/images/navpulse-logo.png';
+import zipattendLogo from '../assets/images/zipattend.png';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 
@@ -336,8 +338,8 @@ function LandingPage() {
       }}>
         {/* Left Content - Text and Button */}
         <div style={{
-          flex: '1',
-          minWidth: '300px',
+          flex: '0.8', // Reduced from 1 to 0.8 to make it narrower
+          minWidth: '250px', // Reduced from 300px to 250px
           textAlign: 'left',
           marginRight: '2rem',
           marginBottom: '2rem'
@@ -383,99 +385,217 @@ function LandingPage() {
         
         {/* Right Content - 2x2 Grid of Projects */}
         <div style={{
-          flex: '1',
-          minWidth: '300px',
+          flex: '1.2',
+          minWidth: '350px',
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
-          gap: '1.5rem',
+          gap: '1.8rem',
           height: '100%'
         }}>
-          {/* Project 1 */}
+          {/* Project 1 - 3STEP Sports */}
           <div style={{
             borderRadius: '8px',
             overflow: 'hidden',
-            backgroundColor: '#d6daf0', // Changed from the gradient to a solid light blue
-            height: '180px',
+            backgroundColor: '#e8eff7', // Lighter blue background from image
+            height: '260px',
             position: 'relative',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
             transition: 'transform 0.3s ease',
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            padding: '1rem'
           }}>
-            <h4 style={{
-              color: '#3248b2', // Kept the blue text color
-              fontFamily: "'Raleway', sans-serif",
-              textAlign: 'center',
-              padding: '0 1rem'
-            }}>Indoor Navigation System</h4>
+            <img 
+              src={zipattendLogo} 
+              alt="ZipAttend" 
+              style={{
+                maxHeight: '45%',
+                maxWidth: '70%',
+                objectFit: 'contain'
+              }}
+            />
+            <div style={{
+              position: 'absolute',
+              bottom: '15px',
+              left: '15px',
+              textAlign: 'left'
+            }}>
+              <p style={{
+                color: '#333',
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: '1rem',
+                fontWeight: '600',
+                margin: 0,
+                marginBottom: '3px'
+              }}>
+                Attendance Tracking Web App
+              </p>
+              <p style={{
+                color: '#666',
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: '0.85rem',
+                fontWeight: '400',
+                margin: 0
+              }}>
+                Salisbury University 
+              </p>
+            </div>
           </div>
           
-          {/* Project 2 */}
+          {/* Project 2 - navpulse */}
           <div style={{
             borderRadius: '8px',
             overflow: 'hidden',
-            backgroundColor: '#d6daf0', // Changed from the gradient to a solid light blue
-            height: '180px',
+            backgroundColor: '#e8eff7', // Lighter blue background from image
+            height: '260px',
             position: 'relative',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
             transition: 'transform 0.3s ease',
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            padding: '1rem'
           }}>
-            <h4 style={{
-              color: '#3248b2', // Kept the blue text color
-              fontFamily: "'Raleway', sans-serif",
-              textAlign: 'center',
-              padding: '0 1rem'
-            }}>AI-Powered Analytics</h4>
+            <img 
+              src={navpulseLogo} 
+              alt="navpulse" 
+              style={{
+                maxHeight: '45%',
+                maxWidth: '70%',
+                objectFit: 'contain'
+              }}
+            />
+            <div style={{
+              position: 'absolute',
+              bottom: '15px',
+              left: '15px',
+              textAlign: 'left'
+            }}>
+              <p style={{
+                color: '#333',
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: '1rem',
+                fontWeight: '600',
+                margin: 0,
+                marginBottom: '3px'
+              }}>
+                Gamified Downtown Mobile App
+              </p>
+              <p style={{
+                color: '#666',
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: '0.85rem',
+                fontWeight: '400',
+                margin: 0
+              }}>
+                Downtown Salisbury- Arts, Business and Culture Dept. 
+              </p>
+            </div>
           </div>
           
-          {/* Project 3 */}
+          {/* Project 3 -  */}
           <div style={{
             borderRadius: '8px',
             overflow: 'hidden',
-            backgroundColor: '#d6daf0', // Changed from the gradient to a solid light blue
-            height: '180px',
+            backgroundColor: '#e8eff7', // Lighter blue background from image
+            height: '260px',
             position: 'relative',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
             transition: 'transform 0.3s ease',
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            padding: '1rem'
           }}>
             <h4 style={{
-              color: '#3248b2', // Kept the blue text color
+              color: '#333',
               fontFamily: "'Raleway', sans-serif",
               textAlign: 'center',
-              padding: '0 1rem'
-            }}>Enterprise Mobile App</h4>
+              padding: '0 1rem',
+              fontSize: '1.8rem',
+              fontWeight: '600'
+            }}>SU MAPS</h4>
+            <div style={{
+              position: 'absolute',
+              bottom: '15px',
+              left: '15px',
+              textAlign: 'left'
+            }}>
+              <p style={{
+                color: '#333',
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: '1rem',
+                fontWeight: '600',
+                margin: 0,
+                marginBottom: '3px'
+              }}>
+                MVP Development
+              </p>
+              <p style={{
+                color: '#666',
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: '0.85rem',
+                fontWeight: '400',
+                margin: 0
+              }}>
+                Sean Berndlmaier
+              </p>
+            </div>
           </div>
           
-          {/* Project 4 */}
+          {/* Project 4 -  */}
           <div style={{
             borderRadius: '8px',
             overflow: 'hidden',
-            backgroundColor: '#d6daf0', // Changed from the gradient to a solid light blue
-            height: '180px',
+            backgroundColor: '#e8eff7', // Lighter blue background from image
+            height: '260px',
             position: 'relative',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
             transition: 'transform 0.3s ease',
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            padding: '1rem'
           }}>
             <h4 style={{
-              color: '#3248b2', // Kept the blue text color
+              color: '#333',
               fontFamily: "'Raleway', sans-serif",
               textAlign: 'center',
-              padding: '0 1rem'
-            }}>Location-Based Marketing</h4>
+              padding: '0 1rem',
+              fontSize: '1.8rem',
+              fontWeight: '600'
+            }}>Project 4</h4>
+            <div style={{
+              position: 'absolute',
+              bottom: '15px',
+              left: '15px',
+              textAlign: 'left'
+            }}>
+              <p style={{
+                color: '#333',
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: '1rem',
+                fontWeight: '600',
+                margin: 0,
+                marginBottom: '3px'
+              }}>
+                What is it
+              </p>
+              <p style={{
+                color: '#666',
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: '0.85rem',
+                fontWeight: '400',
+                margin: 0
+              }}>
+                For who
+              </p>
+            </div>
           </div>
         </div>
       </section>
