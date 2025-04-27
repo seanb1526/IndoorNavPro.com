@@ -61,11 +61,11 @@ function Navbar() {
     textDecoration: 'none',
     fontSize: '1.1rem',
     fontWeight: '500',
-    backgroundColor: '#fcb404', // Updated to requested yellow/orange color
+    backgroundColor: '#3248b2',
     padding: '0.6rem 1.5rem',
     borderRadius: '24px',
     display: 'inline-block',
-    fontFamily: "'Raleway', sans-serif" // Explicitly setting Raleway font
+    fontFamily: "'Raleway', sans-serif"
   };
 
   return (
@@ -83,7 +83,7 @@ function Navbar() {
       </div>
       
       <div style={contactContainerStyle}>
-        <Link to="/contact" style={contactLinkStyle}>Contact</Link>
+        <a href="/#contact" style={contactLinkStyle}>Contact</a>
       </div>
     </nav>
   );

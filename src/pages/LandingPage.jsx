@@ -7,6 +7,7 @@ import softwareVideo from '../assets/videos/software-development.mp4';
 import mobileVideo from '../assets/videos/mobile-app.mp4';
 import navpulseLogo from '../assets/images/navpulse-logo.png';
 import zipattendLogo from '../assets/images/zipattend.png';
+import navproPattern from '../assets/images/navpro-pattern.svg';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 
@@ -596,6 +597,192 @@ function LandingPage() {
                 For who
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" style={{  // Added id="contact" for linking from navbar
+        padding: '5rem 2rem',
+        backgroundColor: '#0a192f', 
+        backgroundImage: `url(${navproPattern})`, // Add the pattern as background
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        color: '#fff',
+        position: 'relative'
+      }}>
+        {/* Add a semi-transparent overlay to improve text readability over the pattern */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(10, 25, 47, 0.85)', // Semi-transparent dark blue overlay
+          zIndex: 1
+        }}></div>
+        
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          maxWidth: '1400px',
+          margin: '0 auto',
+          flexWrap: 'wrap',
+          position: 'relative',
+          zIndex: 2 // Place content above the overlay
+        }}>
+          {/* Left Column - Text */}
+          <div style={{
+            flex: '1',
+            minWidth: '300px',
+            marginRight: '2rem',
+            marginBottom: '2rem'
+          }}>
+            <h2 style={{
+              fontSize: '3.2rem',
+              fontWeight: '600',
+              marginBottom: '1.5rem',
+              fontFamily: "'Raleway', sans-serif",
+              lineHeight: '1.2'
+            }}>Ready to<br />Transform Your<br />Business?</h2>
+            
+            <p style={{
+              fontSize: '1.1rem',
+              lineHeight: '1.6',
+              marginBottom: '2rem',
+              fontFamily: "'Raleway', sans-serif",
+              maxWidth: '550px',
+              color: '#ccd6f6'
+            }}>
+              Schedule a consultation with our team to explore your ideas and project goals.
+            </p>
+            
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginTop: '2rem'
+            }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                marginRight: '2rem'
+              }}>
+                <button style={{  // Removed onClick handler
+                  ...buttonStyle,
+                  backgroundColor: '#3248b2',
+                  marginRight: '1.5rem'
+                }}>
+                  BOOK A CALL
+                </button>
+                <span style={{
+                  fontSize: '1.1rem',
+                  fontFamily: "'Raleway', sans-serif",
+                }}>OR</span>
+              </div>
+              <span style={{
+                fontSize: '1.1rem',
+                fontFamily: "'Raleway', sans-serif",
+              }}>SEND US A MESSAGE</span>
+            </div>
+          </div>
+          
+          {/* Right Column - Form */}
+          <div style={{
+            flex: '1',
+            minWidth: '300px'
+          }}>
+            <form style={{
+              display: 'flex',
+              flexDirection: 'column',
+              width: '100%'
+            }}>
+              <input 
+                type="text" 
+                placeholder="Name" 
+                style={{
+                  padding: '1rem',
+                  marginBottom: '1rem',
+                  backgroundColor: 'transparent',
+                  border: 'none',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.3)',
+                  color: '#fff',
+                  fontSize: '1rem',
+                  fontFamily: "'Raleway', sans-serif",
+                  outline: 'none'
+                }} 
+              />
+              
+              <input 
+                type="email" 
+                placeholder="Email" 
+                style={{
+                  padding: '1rem',
+                  marginBottom: '1rem',
+                  backgroundColor: 'transparent',
+                  border: 'none',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.3)',
+                  color: '#fff',
+                  fontSize: '1rem',
+                  fontFamily: "'Raleway', sans-serif",
+                  outline: 'none'
+                }} 
+              />
+              
+              <input 
+                type="text" 
+                placeholder="Company" 
+                style={{
+                  padding: '1rem',
+                  marginBottom: '1rem',
+                  backgroundColor: 'transparent',
+                  border: 'none',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.3)',
+                  color: '#fff',
+                  fontSize: '1rem',
+                  fontFamily: "'Raleway', sans-serif",
+                  outline: 'none'
+                }} 
+              />
+              
+              <textarea 
+                placeholder="Message" 
+                rows="5" 
+                style={{
+                  padding: '1rem',
+                  marginBottom: '1.5rem',
+                  backgroundColor: 'transparent',
+                  border: 'none',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.3)',
+                  color: '#fff',
+                  fontSize: '1rem',
+                  fontFamily: "'Raleway', sans-serif",
+                  outline: 'none',
+                  resize: 'none'
+                }}
+              ></textarea>
+              
+              <button 
+                type="submit" 
+                style={{
+                  padding: '0.8rem 1.5rem',
+                  backgroundColor: '#fff',
+                  color: '#0a192f',
+                  border: 'none',
+                  borderRadius: '4px',
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                  alignSelf: 'flex-start',
+                  fontFamily: "'Raleway', sans-serif",
+                  fontWeight: '500',
+                  marginTop: '1rem'
+                }}
+              >
+                Submit Message
+              </button>
+            </form>
           </div>
         </div>
       </section>
