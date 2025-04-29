@@ -369,6 +369,7 @@ function ProjectsPage() {
       client: "Salisbury University",
       logo: zipattendLogo,
       year: "2023",
+      slug: "zipattend",
       description: "A mobile web app designed for classroom attendance. Features include seamless integration with student records, facial recognition for authentication, and real-time attendance monitoring for professors."
     },
     {
@@ -377,6 +378,7 @@ function ProjectsPage() {
       client: "Downtown Salisbury- Arts, Business and Culture Dept.",
       logo: navpulseLogo,
       year: "2023", 
+      slug: "navpulse",
       description: "A downtown exploration app that rewards users for visiting local businesses and attractions. The app uses geofencing technology to verify locations and offers a point system for rewards redemption."
     },
     {
@@ -384,6 +386,7 @@ function ProjectsPage() {
       subtitle: "MVP Development",
       client: "Sean Berndlmaier",
       year: "2022",
+      slug: "sumaps",
       description: "Indoor navigation proof-of-concept developed for Salisbury University. The MVP demonstrated how Bluetooth beacons and mobile sensors could provide accurate positioning inside campus buildings."
     },
 
@@ -403,27 +406,29 @@ function ProjectsPage() {
           </div>
           
           <div style={featuredProjectContainerStyle}>
-            <div 
-              style={featuredProjectStyle}
-              onMouseOver={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.2)';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-              }}
-            >
-              <img 
-                src="https://placehold.co/600x400?text=College+Tours" 
-                alt="College Tours Project" 
-                style={featuredImageStyle} 
-              />
-              <div style={featuredOverlayStyle}>
-                <h3 style={featuredTitleStyle}>College Tours</h3>
-                <p style={featuredSubtitleStyle}>Interactive campus navigation for prospective students</p>
+            <Link to="/projects/sumaps" style={{ textDecoration: 'none' }}>
+              <div 
+                style={featuredProjectStyle}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.2)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                }}
+              >
+                <img 
+                  src="https://placehold.co/600x400?text=College+Tours" 
+                  alt="College Tours Project" 
+                  style={featuredImageStyle} 
+                />
+                <div style={featuredOverlayStyle}>
+                  <h3 style={featuredTitleStyle}>College Tours</h3>
+                  <p style={featuredSubtitleStyle}>Interactive campus navigation for prospective students</p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -439,41 +444,46 @@ function ProjectsPage() {
         
         <div style={projectsContainerStyle}>
           {projects.map((project, index) => (
-            <div 
+            <Link 
               key={index} 
-              style={projectCardStyle}
-              onMouseOver={(e) => {
-                Object.assign(e.currentTarget.style, projectCardHoverStyle);
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-              }}
+              to={`/projects/${project.slug}`}
+              style={{ textDecoration: 'none' }}
             >
-              {project.logo && (
-                <img 
-                  src={project.logo} 
-                  alt={project.title} 
-                  style={projectLogoStyle}
-                />
-              )}
-              
-              {!project.logo && (
-                <h3 style={{
-                  color: '#333',
-                  fontFamily: "'Raleway', sans-serif",
-                  textAlign: 'center',
-                  padding: '0 1rem',
-                  fontSize: '1.8rem',
-                  fontWeight: '600'
-                }}>{project.title}</h3>
-              )}
-              
-              <div style={projectInfoStyle}>
-                <p style={projectTitleStyle}>{project.subtitle}</p>
-                <p style={projectSubtitleStyle}>{project.client}</p>
+              <div 
+                style={projectCardStyle}
+                onMouseOver={(e) => {
+                  Object.assign(e.currentTarget.style, projectCardHoverStyle);
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+                }}
+              >
+                {project.logo && (
+                  <img 
+                    src={project.logo} 
+                    alt={project.title} 
+                    style={projectLogoStyle}
+                  />
+                )}
+                
+                {!project.logo && (
+                  <h3 style={{
+                    color: '#333',
+                    fontFamily: "'Raleway', sans-serif",
+                    textAlign: 'center',
+                    padding: '0 1rem',
+                    fontSize: '1.8rem',
+                    fontWeight: '600'
+                  }}>{project.title}</h3>
+                )}
+                
+                <div style={projectInfoStyle}>
+                  <p style={projectTitleStyle}>{project.subtitle}</p>
+                  <p style={projectSubtitleStyle}>{project.client}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

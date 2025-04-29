@@ -4,6 +4,9 @@ import AboutPage from './pages/AboutPage'
 import ServicesPage from './pages/ServicesPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
+import ZipAttendProject from './pages/projects/ZipAttendProject'
+import NavPulseProject from './pages/projects/NavPulseProject'
+import SuMapsProject from './pages/projects/SuMapsProject'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -29,6 +32,9 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/zipattend" element={<ZipAttendProject />} />
+            <Route path="/projects/navpulse" element={<NavPulseProject />} />
+            <Route path="/projects/sumaps" element={<SuMapsProject />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
