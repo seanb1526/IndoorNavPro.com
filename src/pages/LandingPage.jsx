@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import landingVideo from '../assets/videos/landing-video.mp4';
 import aiVideo from '../assets/videos/artificial-intelligence.mp4';
 import locationVideo from '../assets/videos/navigation.mp4';
@@ -250,7 +249,7 @@ function LandingPage() {
         `}
       </style>
       
-      <Navbar />
+      
       
       <section style={heroStyle}>
         {/* Video background */}
