@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import navproPattern from '../../assets/images/navpro-pattern.svg';
 import zipattendLogo from '../../assets/images/zipattend.png';
+import zipattendHero from '../../assets/proj/ZipAttend/ZipAttend-Hero.png';
+import zipattendDashboard from '../../assets/proj/ZipAttend/ZipAttend-Dashboard.jpg';
+import zipattendMobileVideo from '../../assets/proj/ZipAttend/ZipAttend-Mobilec.mp4';
 
 function ZipAttendProject() {
   // Page container style
@@ -14,9 +17,11 @@ function ZipAttendProject() {
     width: '100%',
     height: '70vh',
     position: 'relative',
-    backgroundImage: 'url(https://placehold.co/1920x1080?text=ZipAttend+Hero)',
-    backgroundSize: 'cover',
+    backgroundImage: `url(${zipattendHero})`,
+    backgroundSize: 'contain', // Changed from 'cover' to 'contain' to prevent zooming
     backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat', // Added to prevent tiling
+    backgroundColor: '#192459', // Added background color for areas not covered by the image
     display: 'flex',
     alignItems: 'flex-end',
   };
@@ -243,6 +248,20 @@ function ZipAttendProject() {
     transition: 'color 0.3s ease',
   };
 
+  // Video style for mobile interface
+  const videoContainerStyle = {
+    width: '100%',
+    marginBottom: '5rem',
+    display: 'flex',
+    justifyContent: 'center',
+  };
+
+  const videoStyle = {
+    width: '100%',
+    maxWidth: '1400px',
+    height: 'auto',
+  };
+
   return (
     <div style={pageContainerStyle}>
       {/* Hero Section - Full-width image */}
@@ -297,7 +316,7 @@ function ZipAttendProject() {
 
       {/* Full-width image section */}
       <img 
-        src="https://placehold.co/1920x1080?text=ZipAttend+Dashboard" 
+        src={zipattendDashboard} 
         alt="ZipAttend Dashboard Interface" 
         style={imageFullWidthStyle} 
       />
@@ -331,12 +350,17 @@ function ZipAttendProject() {
         </div>
       </section>
 
-      {/* Full-width image section */}
-      <img 
-        src="https://placehold.co/1920x1080?text=ZipAttend+Mobile+Interface" 
-        alt="ZipAttend Mobile Interface" 
-        style={imageFullWidthStyle} 
-      />
+      {/* Mobile Interface Video */}
+      <div style={videoContainerStyle}>
+        <video 
+          src={zipattendMobileVideo}
+          controls
+          playsInline
+          style={videoStyle}
+          poster={zipattendHero} // Changed from zipattendDashboard to zipattendHero
+          aria-label="ZipAttend Mobile Interface Demo"
+        />
+      </div>
 
       {/* Results Section */}
       <section style={resultsSectionStyle}>
