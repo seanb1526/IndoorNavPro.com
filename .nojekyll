@@ -7,5 +7,7 @@ Add a .gitattributes file to ensure proper file handling:
 
 Also, I recommend creating a `.nojekyll` file in your repository root:
 
-### [.nojekyll](file:///c%3A/Users/seanb/Projects/IndoorNav%20PRO/NavPro-site/.nojekyll)
+### [.nojekyll](file:///c%3A/Users/seanb/Projects/IndoorNav%20PRO/Website/IndoorNavPro.com/.nojekyll)
+
+Create this empty file to prevent Jekyll processing which can interfere with Vite builds:
 
