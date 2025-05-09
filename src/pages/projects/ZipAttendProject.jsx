@@ -18,7 +18,7 @@ function ZipAttendProject() {
     height: '70vh',
     position: 'relative',
     backgroundImage: `url(${zipattendHero})`,
-    backgroundSize: 'contain', // Changed from 'cover' to 'contain' to prevent zooming
+    backgroundSize: 'cover', // Changed back from 'contain' to 'cover'
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat', // Added to prevent tiling
     backgroundColor: '#192459', // Added background color for areas not covered by the image
@@ -281,15 +281,15 @@ function ZipAttendProject() {
         <div style={projectMetaStyle}>
           <div style={metaBlockStyle}>
             <h3 style={metaLabelStyle}>Client</h3>
-            <p style={metaValueStyle}>Salisbury University</p>
+            <p style={metaValueStyle}>Dr. Amit Poddar (Salisbury University)</p>
           </div>
           <div style={metaBlockStyle}>
             <h3 style={metaLabelStyle}>Year</h3>
-            <p style={metaValueStyle}>2023</p>
+            <p style={metaValueStyle}>2025</p>
           </div>
           <div style={metaBlockStyle}>
             <h3 style={metaLabelStyle}>Duration</h3>
-            <p style={metaValueStyle}>4 months</p>
+            <p style={metaValueStyle}>2 months</p>
           </div>
           <div style={metaBlockStyle}>
             <h3 style={metaLabelStyle}>Role</h3>
@@ -326,26 +326,30 @@ function ZipAttendProject() {
         <div>
           <h2 style={sectionTitleStyle}>The Challenge</h2>
           <p style={paragraphStyle}>
-            Salisbury University needed a modern attendance system to replace their paper-based process. 
-            Key challenges included ensuring accessibility across devices, maintaining data privacy, 
-            and creating a system that would integrate seamlessly with existing university databases.
+            Salisbury University needed a modern attendance system to replace their paper-based process, 
+            but existing commercial solutions were prohibitively expensive and lacked the location-based 
+            technology they required to prevent attendance fraud.
           </p>
           <p style={paragraphStyle}>
-            The traditional paper-based attendance systems were prone to errors, time-consuming, and 
-            provided limited insights for administrators tracking student attendance patterns.
+            Key challenges included ensuring cross-platform accessibility, maintaining robust data privacy, 
+            implementing location verification to prevent fraudulent check-ins, and creating an intuitive 
+            experience that would reduce administrative burden rather than add to it.
           </p>
         </div>
         
         <div>
           <h2 style={sectionTitleStyle}>Our Solution</h2>
           <p style={paragraphStyle}>
-            We developed a web application that uses facial recognition for secure authentication, 
-            real-time data synchronization, and an intuitive interface that required minimal training 
-            for faculty and students.
+            We developed ZipAttend, a comprehensive web application that combines QR code technology with 
+            location-awareness for attendance tracking. When students scan a QR code to check in, the system 
+            requires location permissions and captures their current GPS coordinates, creating an audit trail 
+            to deter fraudulent attendance.
           </p>
           <p style={paragraphStyle}>
-            The system includes robust reporting tools for academic administrators, allowing them to 
-            monitor attendance patterns across courses, departments, and the entire university.
+            Faculty benefit from an intuitive dashboard that displays real-time attendance data and analytics, 
+            with the ability to review location data when attendance fraud is suspected. The platform 
+            was built with scalability in mind, allowing for easy deployment at other universities with 
+            minimal customization needed.
           </p>
         </div>
       </section>
@@ -367,27 +371,28 @@ function ZipAttendProject() {
         <div style={{maxWidth: '1400px', margin: '0 auto'}}>
           <h2 style={sectionTitleStyle}>Results</h2>
           <p style={paragraphStyle}>
-            Since implementing ZipAttend, Salisbury University has reported significant improvements in 
-            attendance tracking efficiency and data accuracy. The system has been well-received by both 
-            faculty and students, with high adoption rates across departments.
+            ZipAttend has been successfully implemented for the MASMI Sales Competition events at Salisbury University, 
+            providing a streamlined approach to tracking attendance for these high-profile academic gatherings. The platform 
+            has demonstrated its effectiveness during real-world usage, with event organizers reporting significant 
+            improvements in administrative efficiency.
           </p>
           
           <div style={statsContainerStyle}>
             <div style={statItemStyle}>
-              <div style={statNumberStyle}>40%</div>
-              <p style={statLabelStyle}>Reduction in administrative time</p>
+              <div style={statNumberStyle}>92%</div>
+              <p style={statLabelStyle}>Success rate at recent events</p>
             </div>
             <div style={statItemStyle}>
-              <div style={statNumberStyle}>85%</div>
-              <p style={statLabelStyle}>Faculty satisfaction rate</p>
+              <div style={statNumberStyle}>100%</div>
+              <p style={statLabelStyle}>Data capture accuracy</p>
             </div>
             <div style={statItemStyle}>
-              <div style={statNumberStyle}>99.9%</div>
-              <p style={statLabelStyle}>System uptime</p>
+              <div style={statNumberStyle}>75%</div>
+              <p style={statLabelStyle}>Reduction in check-in time</p>
             </div>
             <div style={statItemStyle}>
-              <div style={statNumberStyle}>30%</div>
-              <p style={statLabelStyle}>Improved data accuracy</p>
+              <div style={statNumberStyle}>24/7</div>
+              <p style={statLabelStyle}>System availability</p>
             </div>
           </div>
         </div>
