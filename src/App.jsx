@@ -26,7 +26,7 @@ function App() {
       <ScrollToTop />
       <div style={appStyle}>
         <Navbar />
-        <main style={{ flex: '1', width: '100%' }}>
+        <main style={{ flex: '1', width: '100%', paddingTop: '100px' }}> {/* Added paddingTop to account for fixed navbar */}
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<AboutPage />} />

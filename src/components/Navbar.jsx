@@ -72,7 +72,7 @@ function Navbar() {
     <nav style={navbarStyle}>
       <div style={logoContainerStyle}>
         <Link to="/" style={logoTextStyle}>
-        <img src={logo} alt="IndoorNav Pro Logo" style={logoStyle} />
+          <img src={logo} alt="IndoorNav Pro Logo" style={logoStyle} />
         </Link>
       </div>
       
@@ -83,7 +83,7 @@ function Navbar() {
       </div>
       
       <div style={contactContainerStyle}>
-        <a href="/contact" style={contactLinkStyle}>Contact</a>
+        <Link to="/contact" style={contactLinkStyle}>Contact</Link>
       </div>
     </nav>
   );
