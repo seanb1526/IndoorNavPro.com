@@ -1,0 +1,11 @@
+```````
+
+### c:\Users\seanb\Projects\IndoorNav PRO\NavPro-site\.gitattributes
+
+Add a .gitattributes file to ensure proper file handling:
+````````
+
+Also, I recommend creating a `.nojekyll` file in your repository root:
+
+### [.nojekyll](file:///c%3A/Users/seanb/Projects/IndoorNav%20PRO/NavPro-site/.nojekyll)
+
