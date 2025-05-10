@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import navproPattern from '../../assets/images/navpro-pattern.svg';
-import navpulseLogo from '../../assets/images/navpulse-logo.png';
+// Use the same image imports as ZipAttendProject for now
+import navpulseHero from '../../assets/proj/NavPulse/NavPulse-Hero.png'; // Changed from zipattendHero
+import zipattendDashboard from '../../assets/proj/ZipAttend/ZipAttend-Dashboard.jpg';
+import zipattendMobileVideo from '../../assets/proj/ZipAttend/ZipAttend-Mobilec.mp4';
 
 function NavPulseProject() {
   // Page container style
@@ -9,216 +12,270 @@ function NavPulseProject() {
     backgroundColor: '#fff',
   };
 
-  // Hero section - full-width image header
+  // Hero section styles
   const heroSectionStyle = {
     width: '100%',
-    height: '70vh',
     position: 'relative',
-    backgroundImage: 'url(https://placehold.co/1920x1080?text=NavPulse+Hero)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundColor: '#f6f8fa',
     display: 'flex',
-    alignItems: 'flex-end',
-  };
-
-  const heroOverlayStyle = {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%)',
-  };
-
-  const heroContentStyle = {
-    width: '100%',
-    padding: '3rem 5%',
-    position: 'relative',
-    zIndex: 2,
+    flexDirection: 'column',
+    padding: '4rem 0',
   };
 
   const heroBreadcrumbStyle = {
     fontSize: '1rem',
-    color: '#e0e0e0',
-    fontFamily: "Raleway, sans-serif",
-    marginBottom: '1rem',
+    color: '#777',
+    fontFamily: "'Raleway', sans-serif",
+    marginBottom: '2rem',
     display: 'flex',
     alignItems: 'center',
+    paddingLeft: '10%',
   };
 
   const breadcrumbLinkStyle = {
-    color: '#e0e0e0',
+    color: '#777',
     textDecoration: 'none',
     marginRight: '0.5rem',
+    transition: 'color 0.2s ease',
+  };
+
+  const heroContentContainerStyle = {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '4rem',
+    maxWidth: '1400px',
+    margin: '0 auto',
+    padding: '0 5%',
+  };
+
+  const heroContentLeftStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
   };
 
   const heroTitleStyle = {
-    fontSize: '3.5rem',
+    fontSize: '4.5rem',
     fontWeight: '700',
-    color: '#ffffff',
-    fontFamily: "Raleway, sans-serif",
-    marginBottom: '1rem',
+    color: '#192459',
+    fontFamily: "'Raleway', sans-serif",
+    marginBottom: '1.5rem',
+    lineHeight: '1.1',
   };
 
   const heroSubtitleStyle = {
     fontSize: '1.5rem',
     fontWeight: '400',
-    color: '#e0e0e0',
-    fontFamily: "Raleway, sans-serif",
-    maxWidth: '800px',
+    color: '#555',
+    fontFamily: "'Raleway', sans-serif",
+    marginBottom: '2.5rem',
+    lineHeight: '1.6',
   };
 
-  // Project intro section
-  const introSectionStyle = {
+  const heroImageStyle = {
+    width: '100%',
+    borderRadius: '8px',
+    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+  };
+  
+  // Project meta section
+  const metaSectionStyle = {
+    backgroundColor: '#fff',
+    padding: '6rem 5%',
+    borderBottom: '1px solid #eaeaea',
+  };
+  
+  const metaContainerStyle = {
     display: 'grid',
-    gridTemplateColumns: 'minmax(300px, 1fr) 2fr',
+    gridTemplateColumns: 'repeat(4, 1fr)',
     gap: '3rem',
-    padding: '5rem 5%',
     maxWidth: '1400px',
     margin: '0 auto',
   };
-
-  const projectMetaStyle = {
+  
+  const metaBlockStyle = {
     display: 'flex',
     flexDirection: 'column',
-    gap: '2rem',
   };
-
-  const metaBlockStyle = {
-    borderBottom: '1px solid #eaeaea',
-    paddingBottom: '1.5rem',
-  };
-
+  
   const metaLabelStyle = {
     fontSize: '0.9rem',
     color: '#888',
     textTransform: 'uppercase',
     letterSpacing: '1px',
-    marginBottom: '0.5rem',
-    fontFamily: "Raleway, sans-serif",
+    marginBottom: '0.8rem',
+    fontFamily: "'Raleway', sans-serif",
   };
-
+  
   const metaValueStyle = {
-    fontSize: '1.1rem',
+    fontSize: '1.2rem',
     color: '#333',
-    fontFamily: "Raleway, sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: '500',
   };
 
-  const projectDescriptionStyle = {
-    fontSize: '1.2rem',
-    lineHeight: '1.8',
-    color: '#444',
-    fontFamily: "Raleway, sans-serif",
+  // Project description section
+  const descriptionSectionStyle = {
+    padding: '6rem 5%',
+    backgroundColor: '#fff',
+    borderBottom: '1px solid #eaeaea',
   };
 
-  // Content sections
-  const contentSectionStyle = {
-    padding: '5rem 5%',
+  const descriptionContainerStyle = {
+    maxWidth: '1000px',
+    margin: '0 auto',
+  };
+  
+  const descriptionTextStyle = {
+    fontSize: '1.3rem',
+    lineHeight: '1.8',
+    color: '#444',
+    fontFamily: "'Raleway', sans-serif",
+  };
+  
+  // Dashboard image section
+  const imageFullWidthContainerStyle = {
+    padding: '6rem 5%',
+    backgroundColor: '#f6f8fa',
+    borderBottom: '1px solid #eaeaea',
+  };
+  
+  const imageFullWidthStyle = {
+    width: '90%',
+    maxWidth: '1200px',
+    height: 'auto',
+    margin: '0 auto',
+    display: 'block',
+    borderRadius: '8px',
+    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.1)',
+  };
+
+  // Features section
+  const featuresSectionStyle = {
+    padding: '6rem 5%',
+    backgroundColor: '#fff',
+    borderBottom: '1px solid #eaeaea',
+  };
+  
+  const featuresContainerStyle = {
     maxWidth: '1400px',
     margin: '0 auto',
   };
-
-  const sectionTitleStyle = {
-    fontSize: '2.2rem',
-    fontWeight: '600',
-    marginBottom: '2rem',
-    color: '#192459',
-    fontFamily: "Raleway, sans-serif",
-  };
-
-  const paragraphStyle = {
-    fontSize: '1.1rem',
-    lineHeight: '1.8',
-    color: '#444',
-    marginBottom: '2rem',
-    fontFamily: "Raleway, sans-serif",
-    maxWidth: '900px',
-  };
-
-  // Full-width image section
-  const imageFullWidthStyle = {
-    width: '100%',
-    height: 'auto',
-    marginBottom: '5rem',
-  };
-
-  // Features section styles
-  const featuresSectionStyle = {
-    padding: '5rem 5%',
-    backgroundColor: '#f8f9fa',
-  };
-
+  
   const featuresGridStyle = {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
     gap: '2rem',
-    maxWidth: '1400px',
-    margin: '3rem auto 0',
+    marginTop: '4rem',
   };
 
   const featureCardStyle = {
-    backgroundColor: '#fff',
+    backgroundColor: '#f6f8fa',
     borderRadius: '8px',
-    padding: '2rem',
-    boxShadow: '0 2px 15px rgba(0,0,0,0.05)',
+    padding: '2.5rem',
+    boxShadow: '0 4px 15px rgba(0,0,0,0.05)',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
   };
 
   const featureTitleStyle = {
-    fontSize: '1.4rem',
+    fontSize: '1.5rem',
     fontWeight: '600',
-    marginBottom: '1rem',
+    marginBottom: '1.2rem',
     color: '#192459',
-    fontFamily: "Raleway, sans-serif",
+    fontFamily: "'Raleway', sans-serif",
   };
 
   const featureDescriptionStyle = {
     fontSize: '1.05rem',
     color: '#444',
     lineHeight: '1.6',
-    fontFamily: "Raleway, sans-serif",
+    fontFamily: "'Raleway', sans-serif",
   };
 
-  // Results section
+  // Video section
+  const videoSectionStyle = {
+    padding: '6rem 5%',
+    backgroundColor: '#f6f8fa',
+    borderBottom: '1px solid #eaeaea',
+  };
+  
+  const videoContainerStyle = {
+    maxWidth: '1200px',
+    width: '90%',
+    margin: '0 auto',
+  };
+  
+  const videoStyle = {
+    width: '100%',
+    height: 'auto',
+    borderRadius: '8px',
+    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+  };
+  
+  const videoTitleStyle = {
+    fontSize: '2.2rem',
+    fontWeight: '600',
+    marginBottom: '3rem',
+    color: '#192459',
+    fontFamily: "'Raleway', sans-serif",
+    textAlign: 'center',
+  };
+
+  // Results section with stats
   const resultsSectionStyle = {
-    padding: '5rem 5%',
+    padding: '6rem 5%',
+    backgroundColor: '#fff',
+    borderBottom: '1px solid #eaeaea',
+  };
+  
+  const resultsContainerStyle = {
     maxWidth: '1400px',
     margin: '0 auto',
   };
 
-  // Stats section styles
   const statsContainerStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '2rem',
-    marginTop: '3rem',
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    gap: '3rem',
+    marginTop: '4rem',
   };
 
   const statItemStyle = {
-    textAlign: 'left',
-    borderLeft: '3px solid #3248b2',
-    paddingLeft: '1.5rem',
+    padding: '2rem',
+    borderRadius: '8px',
+    backgroundColor: '#f6f8fa',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
   };
 
   const statNumberStyle = {
-    fontSize: '2.5rem',
+    fontSize: '3.5rem',
     fontWeight: '700',
     color: '#192459',
-    fontFamily: "Raleway, sans-serif",
-    marginBottom: '0.5rem',
+    fontFamily: "'Raleway', sans-serif",
+    marginBottom: '1rem',
   };
 
   const statLabelStyle = {
     fontSize: '1.1rem',
-    fontWeight: '400',
+    fontWeight: '500',
     color: '#555',
     fontFamily: "Raleway, sans-serif",
+    textAlign: 'center',
   };
 
   // Tech stack section
-  const techStackStyle = {
-    padding: '5rem 5%',
-    maxWidth: '1400px',
+  const techStackSectionStyle = {
+    padding: '6rem 5%',
+    backgroundColor: '#f6f8fa',
+    borderBottom: '1px solid #eaeaea',
+  };
+  
+  const techStackContainerStyle = {
+    maxWidth: '1000px',
     margin: '0 auto',
   };
 
@@ -226,22 +283,25 @@ function NavPulseProject() {
     display: 'flex',
     flexWrap: 'wrap',
     gap: '1rem',
-    marginTop: '2rem',
+    marginTop: '3rem',
+    justifyContent: 'center',
   };
 
   const techItemStyle = {
-    backgroundColor: '#e8eff7',
+    backgroundColor: '#fff',
     color: '#192459',
     fontFamily: "Raleway, sans-serif",
     fontSize: '1rem',
     fontWeight: '500',
-    padding: '0.7rem 1.5rem',
+    padding: '0.8rem 1.8rem',
     borderRadius: '30px',
+    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.05)',
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
   };
 
   // Next project section
-  const nextProjectStyle = {
-    padding: '5rem 5%',
+  const nextProjectSectionStyle = {
+    padding: '8rem 5%',
     backgroundColor: '#0a192f',
     color: '#fff',
     textAlign: 'center',
@@ -253,195 +313,208 @@ function NavPulseProject() {
   };
 
   const nextProjectTitleStyle = {
-    fontSize: '2rem',
+    fontSize: '2.2rem',
     fontWeight: '600',
-    marginBottom: '1.5rem',
-    fontFamily: "Raleway, sans-serif",
+    marginBottom: '2rem',
+    fontFamily: "'Raleway', sans-serif",
     color: '#fff',
   };
 
   const nextProjectLinkStyle = {
-    fontSize: '3rem',
+    fontSize: '2.8rem',
     fontWeight: '700',
     color: '#fff',
     textDecoration: 'none',
-    display: 'block',
-    marginTop: '2rem',
-    fontFamily: "Raleway, sans-serif",
-    transition: 'color 0.3s ease',
+    display: 'inline-block',
+    marginTop: '1rem',
+    fontFamily: "'Raleway', sans-serif",
+    transition: 'opacity 0.3s ease',
+    position: 'relative',
+    paddingBottom: '0.5rem',
+  };
+
+  // Add missing sectionTitleStyle that's referenced later
+  const sectionTitleStyle = {
+    fontSize: '2.2rem',
+    fontWeight: '600',
+    marginBottom: '2rem',
+    color: '#192459',
+    fontFamily: "'Raleway', sans-serif",
   };
 
   return (
     <div style={pageContainerStyle}>
-      {/* Hero Section - Full-width image */}
+      {/* Hero Section */}
       <section style={heroSectionStyle}>
-        <div style={heroOverlayStyle}></div>
-        <div style={heroContentStyle}>
-          <div style={heroBreadcrumbStyle}>
-            <Link to="/projects" style={breadcrumbLinkStyle}>Projects</Link> / NavPulse
+        <div style={heroBreadcrumbStyle}>
+          <Link to="/projects" style={breadcrumbLinkStyle}>Projects</Link> / NavPulse
+        </div>
+        <div style={heroContentContainerStyle}>
+          <div style={heroContentLeftStyle}>
+            <h1 style={heroTitleStyle}>NavPulse</h1>
+            <p style={heroSubtitleStyle}>
+              A gamified exploration app that drives engagement and foot traffic in Downtown Salisbury.
+            </p>
           </div>
-          <h1 style={heroTitleStyle}>NavPulse</h1>
-          <p style={heroSubtitleStyle}>A gamified downtown exploration app for Salisbury</p>
+          <div>
+            <img 
+              src={navpulseHero} // Changed from zipattendHero to navpulseHero
+              alt="NavPulse Application" 
+              style={heroImageStyle} 
+            />
+          </div>
         </div>
       </section>
 
-      {/* Project Intro Section */}
-      <section style={introSectionStyle}>
-        <div style={projectMetaStyle}>
+      {/* Project Meta Section */}
+      <section style={metaSectionStyle}>
+        <div style={metaContainerStyle}>
           <div style={metaBlockStyle}>
             <h3 style={metaLabelStyle}>Client</h3>
-            <p style={metaValueStyle}>Downtown Salisbury - Arts, Business and Culture Dept.</p>
+            <p style={metaValueStyle}>Downtown Salisbury Arts, Business and Culture Department</p>
           </div>
           <div style={metaBlockStyle}>
             <h3 style={metaLabelStyle}>Year</h3>
-            <p style={metaValueStyle}>2023</p>
+            <p style={metaValueStyle}>2025</p>
           </div>
           <div style={metaBlockStyle}>
             <h3 style={metaLabelStyle}>Duration</h3>
-            <p style={metaValueStyle}>6 months</p>
+            <p style={metaValueStyle}>3 months</p>
           </div>
           <div style={metaBlockStyle}>
-            <h3 style={metaLabelStyle}>Platform</h3>
-            <p style={metaValueStyle}>iOS & Android</p>
-          </div>
-          <div style={{...metaBlockStyle, borderBottom: 'none'}}>
             <h3 style={metaLabelStyle}>Categories</h3>
             <p style={metaValueStyle}>Mobile Application, Location Technology, Gamification</p>
           </div>
         </div>
-        
-        <div style={projectDescriptionStyle}>
-          <p style={{marginBottom: '2rem'}}>
+      </section>
+      
+      {/* Project Description Section */}
+      <section style={descriptionSectionStyle}>
+        <div style={descriptionContainerStyle}>
+          <p style={descriptionTextStyle}>
             NavPulse is a gamified downtown exploration app developed for the Arts, Business and Culture Department 
-            of Downtown Salisbury. The app encourages visitors and locals to discover local businesses, historical 
-            landmarks, and cultural attractions through a rewarding, game-like experience.
+            of Downtown Salisbury. The app encourages users to explore and visit storefronts through a rewarding, game-like experience.
           </p>
-          <p>
-            Users earn points by visiting various locations throughout downtown, unlocking achievements, and 
-            participating in seasonal events. These points can be redeemed for discounts and special offers at 
-            participating businesses, creating a mutually beneficial ecosystem for the downtown economy.
+          <p style={{...descriptionTextStyle, marginTop: '1.5rem'}}>
+            Users earn in-game coins by visiting participating storefronts and scanning the corresponding BLE beacon. You can scan each store once per day.
+            Save up your coins and redeem them for discounts and special offers exclusively available on the app. 
           </p>
         </div>
       </section>
+      
+      {/* Dashboard Image Section */}
+      <section style={imageFullWidthContainerStyle}>
+        <img 
+          src={zipattendDashboard} // Using ZipAttend dashboard image temporarily
+          alt="NavPulse App Interface" 
+          style={imageFullWidthStyle} 
+        />
+      </section>
 
-      {/* Full-width image section */}
-      <img 
-        src="https://placehold.co/1920x1080?text=NavPulse+App+Interface" 
-        alt="NavPulse App Interface" 
-        style={imageFullWidthStyle} 
-      />
-
-      {/* App Features Section */}
+      {/* Key Features Section */}
       <section style={featuresSectionStyle}>
-        <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-          <h2 style={sectionTitleStyle}>Key Features</h2>
-          <p style={paragraphStyle}>
-            NavPulse combines several technologies to create an engaging and useful downtown exploration 
-            experience. Here are some of the key features that make it special:
+        <div style={featuresContainerStyle}>
+          <h2 style={{...sectionTitleStyle, textAlign: 'center'}}>Key Features</h2>
+          <p style={{fontSize: '1.15rem', lineHeight: '1.8', color: '#444', marginBottom: '2rem', fontFamily: "Raleway, sans-serif", textAlign: 'center', maxWidth: '800px', margin: '0 auto 3rem auto'}}>
+            NavPulse leverages location technology in innovative ways to connect users with downtown businesses.
           </p>
           
           <div style={featuresGridStyle}>
             <div style={featureCardStyle}>
-              <h3 style={featureTitleStyle}>Geofencing Technology</h3>
+              <h3 style={featureTitleStyle}>Smart Beacon Technology</h3>
               <p style={featureDescriptionStyle}>
-                Accurately detects when users visit specific locations using geofencing and Bluetooth beacons.
+                BLE beacons deliver localized proximity advertising when scanned, showing users store-specific 
+                promotional content while earning in-game currency.
               </p>
             </div>
             <div style={featureCardStyle}>
-              <h3 style={featureTitleStyle}>Achievement System</h3>
+              <h3 style={featureTitleStyle}>Digital Rewards</h3>
               <p style={featureDescriptionStyle}>
-                Rewards users with badges and points for discovering new locations and completing challenges.
-              </p>
-            </div>
-            <div style={featureCardStyle}>
-              <h3 style={featureTitleStyle}>Local Events Calendar</h3>
-              <p style={featureDescriptionStyle}>
-                Keeps users informed about upcoming events and activities in downtown Salisbury.
+                Users collect in-app currency by visiting participating locations, redeemable for exclusive offers and discounts.
               </p>
             </div>
             <div style={featureCardStyle}>
               <h3 style={featureTitleStyle}>Business Directory</h3>
               <p style={featureDescriptionStyle}>
-                Comprehensive listing of local businesses with details, hours, and special offers.
-              </p>
-            </div>
-            <div style={featureCardStyle}>
-              <h3 style={featureTitleStyle}>Augmented Reality</h3>
-              <p style={featureDescriptionStyle}>
-                Interactive AR experiences at historical landmarks and points of interest.
-              </p>
-            </div>
-            <div style={featureCardStyle}>
-              <h3 style={featureTitleStyle}>Reward Marketplace</h3>
-              <p style={featureDescriptionStyle}>
-                Platform for users to redeem earned points for discounts and special offers.
+                Easy-to-browse listing of participating downtown businesses with essential information.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Full-width image section */}
-      <img 
-        src="https://placehold.co/1920x1080?text=NavPulse+Map+Feature" 
-        alt="NavPulse Map Feature" 
-        style={imageFullWidthStyle} 
-      />
+      {/* Mobile Interface Video */}
+      <section style={videoSectionStyle}>
+        <div style={videoContainerStyle}>
+          <h2 style={videoTitleStyle}>See NavPulse in Action</h2>
+          <video 
+            src={zipattendMobileVideo} // Using ZipAttend video temporarily
+            controls
+            playsInline
+            style={videoStyle}
+            poster={navpulseHero} // Changed from zipattendHero to navpulseHero
+            aria-label="NavPulse Mobile Interface Demo"
+          />
+        </div>
+      </section>
 
       {/* Results Section */}
       <section style={resultsSectionStyle}>
-        <h2 style={sectionTitleStyle}>Results & Impact</h2>
-        <p style={paragraphStyle}>
-          NavPulse has made a significant impact on downtown Salisbury's business community and visitor 
-          engagement. The app has helped drive foot traffic to local businesses and increased participation 
-          in downtown events.
-        </p>
-        
-        <div style={statsContainerStyle}>
-          <div style={statItemStyle}>
-            <div style={statNumberStyle}>3,000+</div>
-            <p style={statLabelStyle}>App downloads in the first three months</p>
+        <div style={resultsContainerStyle}>
+          <h2 style={{...sectionTitleStyle, textAlign: 'center'}}>Results & Impact</h2>
+          <p style={{fontSize: '1.15rem', lineHeight: '1.8', color: '#444', marginBottom: '2rem', fontFamily: "Raleway, sans-serif", textAlign: 'center', maxWidth: '800px', margin: '0 auto 2rem auto'}}>
+            NavPulse was deployed as a three-month beta test from February to May 2025, providing valuable insights 
+            into user engagement patterns and technical performance in real-world conditions.
+          </p>
+          
+          <div style={statsContainerStyle}>
+            <div style={statItemStyle}>
+              <div style={statNumberStyle}>90</div>
+              <p style={statLabelStyle}>App downloads during beta period</p>
+            </div>
+            <div style={statItemStyle}>
+              <div style={statNumberStyle}>10</div>
+              <p style={statLabelStyle}>Businesses participated</p>
+            </div>
+            <div style={statItemStyle}>
+              <div style={statNumberStyle}>3</div>
+              <p style={statLabelStyle}>Month beta test</p>
+            </div>
+            <div style={statItemStyle}>
+              <div style={statNumberStyle}>24/7</div>
+              <p style={statLabelStyle}>System availability</p>
+            </div>
           </div>
-          <div style={statItemStyle}>
-            <div style={statNumberStyle}>68%</div>
-            <p style={statLabelStyle}>Weekly active users</p>
-          </div>
-          <div style={statItemStyle}>
-            <div style={statNumberStyle}>24%</div>
-            <p style={statLabelStyle}>Increase in business foot traffic</p>
-          </div>
-          <div style={statItemStyle}>
-            <div style={statNumberStyle}>35%</div>
-            <p style={statLabelStyle}>Increase in event attendance</p>
-          </div>
+          
+          <p style={{fontSize: '1.15rem', lineHeight: '1.8', color: '#444', fontFamily: "Raleway, sans-serif", textAlign: 'center', maxWidth: '800px', margin: '3rem auto 0 auto'}}>
+            The winter beta test provided valuable learning opportunities about deployment challenges and user engagement patterns. 
+            The project concluded at the end of the scheduled beta period, with insights gained about 
+            seasonal impacts on downtown foot traffic and the technical requirements for proximity-based marketing solutions.
+          </p>
         </div>
-        
-        <p style={{...paragraphStyle, marginTop: '3rem'}}>
-          The gamification elements proved particularly effective, with users visiting an average of 7 new 
-          businesses after downloading the app. The Arts, Business and Culture Department has since expanded 
-          the app's scope to include seasonal campaigns and partnerships with local festivals and universities.
-        </p>
       </section>
 
       {/* Tech Stack */}
-      <section style={techStackStyle}>
-        <h2 style={sectionTitleStyle}>Technologies Used</h2>
-        <div style={techListStyle}>
-          <span style={techItemStyle}>React Native</span>
-          <span style={techItemStyle}>Node.js</span>
-          <span style={techItemStyle}>Express</span>
-          <span style={techItemStyle}>MongoDB</span>
-          <span style={techItemStyle}>AWS Lambda</span>
-          <span style={techItemStyle}>Geolocation API</span>
-          <span style={techItemStyle}>Bluetooth Beacons</span>
-          <span style={techItemStyle}>AR Kit / AR Core</span>
+      <section style={techStackSectionStyle}>
+        <div style={techStackContainerStyle}>
+          <h2 style={{...sectionTitleStyle, textAlign: 'center'}}>Technologies Used</h2>
+          <div style={techListStyle}>
+            <div style={techItemStyle}>React Native</div>
+            <div style={techItemStyle}>Node.js</div>
+            <div style={techItemStyle}>Express</div>
+            <div style={techItemStyle}>MongoDB</div>
+            <div style={techItemStyle}>AWS Lambda</div>
+            <div style={techItemStyle}>Geolocation API</div>
+            <div style={techItemStyle}>Bluetooth Beacons</div>
+            <div style={techItemStyle}>AR Kit / AR Core</div>
+          </div>
         </div>
       </section>
 
       {/* Next Project Section */}
-      <section style={nextProjectStyle}>
+      <section style={nextProjectSectionStyle}>
         <div style={nextProjectContentStyle}>
-          <p style={{fontSize: '1.2rem', opacity: '0.8', marginBottom: '0.5rem'}}>Next Project</p>
+          <p style={{fontSize: '1.2rem', opacity: '0.8', marginBottom: '1rem'}}>Next Project</p>
           <h2 style={nextProjectTitleStyle}>Explore another project</h2>
           <Link to="/projects/sumaps" style={nextProjectLinkStyle}>
             SU MAPS: Indoor Navigation System →
