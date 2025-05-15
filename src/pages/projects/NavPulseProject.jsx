@@ -10,6 +10,7 @@ function NavPulseProject() {
   // Page container style
   const pageContainerStyle = {
     backgroundColor: '#fff',
+    paddingTop: '100px', // Add padding to account for navbar height
   };
 
   // Hero section styles

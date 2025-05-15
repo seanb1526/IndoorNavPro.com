@@ -1,19 +1,44 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 
 function Navbar() {
+  const location = useLocation();
+  const isLandingPage = location.pathname === '/';
+  const [scrolled, setScrolled] = useState(false);
+
+  // Handle scroll event to change navbar style
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Call once on mount to set initial state
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Set background color explicitly with rgba and 0 alpha for true transparency
   const navbarStyle = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '1rem 2rem',
-    backgroundColor: '#192459', // Updated to the requested darker blue color
+    backgroundColor: isLandingPage && !scrolled ? 'rgba(0, 0, 0, 0)' : '#192459',
     position: 'fixed',
+    top: 0,
+    left: 0,
     width: '100%',
     zIndex: 1000,
     height: '100px',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    transition: 'background-color 0.3s ease',
   };
 
   const logoContainerStyle = {

@@ -10,7 +10,7 @@ function ZipAttendProject() {
   // Page container style
   const pageContainerStyle = {
     backgroundColor: '#fff',
-     // Reduced from 100px to 80px to minimize white space
+    paddingTop: '100px', // Add padding to account for navbar height
   };
 
   // Hero section styles

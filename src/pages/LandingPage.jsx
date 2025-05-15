@@ -13,22 +13,24 @@ import ServiceCard from '../components/ServiceCard';
 function LandingPage() {
   const heroStyle = {
     position: 'relative',
-    padding: '0', // Remove padding to maximize space
-    height: '100vh', // Use viewport height instead of minHeight
+    padding: '0',
+    height: '100vh', // Using viewport height
+    width: '100%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
     overflow: 'hidden',
-    color: '#fff'
+    color: '#fff',
+    marginTop: '0'
   }
   
   const heroContentStyle = {
     maxWidth: '800px',
     textAlign: 'left', // Left-aligned text
     position: 'relative',
-    zIndex: 2,
+    zIndex: 2, // Above the video and overlay
     marginLeft: '10%', // Add some margin from the left edge
-    marginTop: '8rem', // Increased margin to move content further down
+    marginTop: '8rem', // Increased margin to move content down, accounting for navbar
   }
   
   const heroTitleStyle = {
@@ -71,7 +73,9 @@ function LandingPage() {
     left: 0,
     width: '100%',
     height: '100%',
-    objectFit: 'cover'
+    objectFit: 'cover', // This ensures video covers the area while maintaining aspect ratio
+    objectPosition: 'center center', // Center the video
+    zIndex: 0 // Ensure it's below other content
   }
   
   const sectionStyle = {
@@ -233,6 +237,7 @@ function LandingPage() {
   ];
   
   return (
+    // Remove the negative margin which was causing the white space
     <div>
       {/* Add style tag for animations */}
       <style>
@@ -249,11 +254,8 @@ function LandingPage() {
         `}
       </style>
       
-      
-      
       <section style={heroStyle}>
-        {/* Video background */}
-        <div style={videoOverlayStyle}></div>
+        {/* Video background - rendered first so it appears below other elements */}
         <video 
           style={videoBackgroundStyle} 
           autoPlay 
@@ -264,7 +266,11 @@ function LandingPage() {
           Your browser does not support the video tag.
         </video>
         
-        <div style={heroContentStyle}>
+        {/* Overlay on top of video */}
+        <div style={videoOverlayStyle}></div>
+        
+        {/* Content on top of overlay - adjust top margin to account for navbar */}
+        <div style={{...heroContentStyle, paddingTop: '100px'}}>
           <h1 style={heroTitleStyle}>Experts in <br></br> Location Software</h1>
           <a href="/contact" style={buttonStyle}>Get Started</a>
         </div>
