@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
+import '../styles/navbar.css'; // Add this import for the CSS
 
 function Navbar() {
   const location = useLocation();
@@ -52,6 +53,11 @@ function Navbar() {
     marginRight: '10px'
   };
 
+  const whiteSvgStyle = {
+    ...logoStyle,
+    filter: 'brightness(0) invert(1)' // This makes any colored SVG white
+  };
+
   const logoTextStyle = {
     fontSize: '1.5rem',
     fontWeight: 'bold',
@@ -97,7 +103,7 @@ function Navbar() {
     <nav style={navbarStyle}>
       <div style={logoContainerStyle}>
         <Link to="/" style={logoTextStyle}>
-          <img src={logo} alt="IndoorNav Pro Logo" style={logoStyle} />
+          <img src={logo} alt="IndoorNav Pro Logo" style={whiteSvgStyle} />
         </Link>
       </div>
       
