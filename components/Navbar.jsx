@@ -33,7 +33,14 @@ const Navbar = () => {
     >
       <div className="max-w-full m-auto flex justify-between items-center px-4 py-2 text-white">
         <Link href="/">
-          <Image src={logo} alt="IndoorNav PRO Logo" width={150} height={40} />
+          <Image 
+            src={logo} 
+            alt="IndoorNav PRO Logo" 
+            width={150} 
+            height={40} 
+            className="logo-white" 
+            style={{ filter: 'brightness(0) invert(1)' }}
+          />
         </Link>
         <ul className="hidden sm:flex">
           <li className="p-4">
