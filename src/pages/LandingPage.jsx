@@ -351,7 +351,7 @@ function LandingPage() {
           marginBottom: '2rem'
         }}>
           <h3 style={{
-            fontSize: '1.5rem',
+            fontSize: '1.25rem', // Changed from 1.5rem to 1.25rem (approximately 4pts smaller)
             fontWeight: '500',
             marginBottom: '1rem',
             fontFamily: "'Raleway', sans-serif",
@@ -418,8 +418,8 @@ function LandingPage() {
                 src={zipattendLogo} 
                 alt="ZipAttend" 
                 style={{
-                  maxHeight: '45%',
-                  maxWidth: '70%',
+                  maxHeight: '60%', // Changed from 45% to 60% for larger logo
+                  maxWidth: '80%', // Changed from 70% to 80% for larger logo
                   objectFit: 'contain'
                 }}
               />
@@ -472,8 +472,8 @@ function LandingPage() {
                 src={navpulseLogo} 
                 alt="navpulse" 
                 style={{
-                  maxHeight: '45%',
-                  maxWidth: '70%',
+                  maxHeight: '90%', // Changed from 45% to 60% for larger logo
+                  maxWidth: '90%', // Changed from 70% to 80% for larger logo
                   objectFit: 'contain'
                 }}
               />
