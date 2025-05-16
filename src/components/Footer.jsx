@@ -53,7 +53,8 @@ function Footer() {
 
   const logoStyle = {
     height: '50px',
-    marginBottom: '1.5rem'
+    marginBottom: '1.5rem',
+    filter: 'brightness(0) invert(0.8)' // This makes the logo light gray (80% white)
   }
 
   const companyDescStyle = {
